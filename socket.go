@@ -231,10 +231,8 @@ connect:
 		conn, err = sck.dialer.DialContext(sck.ctx, "udp", addr)
 	case "inproc":
 		conn, err = inproc.Dial(addr)
-	case "ws":
-		conn, err = wsdropin.Dial("http://" + addr)
-	case "wss":
-		conn, err = wsdropin.Dial("https://" + addr)
+	case "ws", "wss":
+		conn, err = wsdropin.Dial(endpoint)
 	default:
 		panic("zmq4: unknown protocol " + network)
 	}
