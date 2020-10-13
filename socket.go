@@ -232,7 +232,9 @@ connect:
 	case "inproc":
 		conn, err = inproc.Dial(addr)
 	case "ws":
-		conn, err = wsdropin.Dial(addr)
+		conn, err = wsdropin.Dial("http://" + addr)
+	case "wss":
+		conn, err = wsdropin.Dial("https://" + addr)
 	default:
 		panic("zmq4: unknown protocol " + network)
 	}
