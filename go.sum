@@ -4,6 +4,8 @@ github.com/space55/wsdropin v0.0.2 h1:5OIMFKUjULSSTtCCzB99nVgsNbQAZsvB/aSlZjZNCq
 github.com/space55/wsdropin v0.0.2/go.mod h1:+hHAK3VbmqD8tHzLTTuNmw1+8p4jFl9oCQhxJ11G/MI=
 github.com/space55/wsdropin v0.0.3 h1:xDpRZfaJXAAQx6wF35AhAFuM9JB9xm7n1CEn5rRFm6w=
 github.com/space55/wsdropin v0.0.3/go.mod h1:+hHAK3VbmqD8tHzLTTuNmw1+8p4jFl9oCQhxJ11G/MI=
+github.com/space55/wsdropin v0.0.4 h1:xy4mk/VOegGe3T+sIMRPIjoM07D8MSh5NM4O9PK1A+s=
+github.com/space55/wsdropin v0.0.4/go.mod h1:+hHAK3VbmqD8tHzLTTuNmw1+8p4jFl9oCQhxJ11G/MI=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=
 golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3/go.mod h1:t9HGtf8HONx5eT2rtn7q6eTqICYqUVnKs3thJo3Qplg=
