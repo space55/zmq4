@@ -14,6 +14,7 @@ import (
 	"time"
 
 	"github.com/go-zeromq/zmq4/internal/inproc"
+	"github.com/space55/wsdropin"
 	"golang.org/x/xerrors"
 )
 
@@ -165,6 +166,8 @@ func (sck *socket) Listen(endpoint string) error {
 		l, err = net.Listen("udp", addr)
 	case "inproc":
 		l, err = inproc.Listen(addr)
+	case "ws":
+		l, err = wsdropin.Listen(addr)
 	default:
 		panic("zmq4: unknown protocol " + network)
 	}
@@ -228,6 +231,8 @@ connect:
 		conn, err = sck.dialer.DialContext(sck.ctx, "udp", addr)
 	case "inproc":
 		conn, err = inproc.Dial(addr)
+	case "ws":
+		conn, err = wsdropin.Dial(addr)
 	default:
 		panic("zmq4: unknown protocol " + network)
 	}
