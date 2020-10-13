@@ -22,14 +22,13 @@ func splitAddr(v string) (network, addr string, err error) {
 		err = errInvalidAddress
 		return network, addr, err
 	}
-	print("Changes")
 	var (
 		host string
 		port string
 	)
 	network = ep[0]
 	switch network {
-	case "tcp", "udp":
+	case "tcp", "udp", "ws":
 		host, port, err = net.SplitHostPort(ep[1])
 		if err != nil {
 			return network, addr, err
@@ -51,10 +50,6 @@ func splitAddr(v string) (network, addr string, err error) {
 		return network, host, nil
 	case "inproc":
 		host = ep[1]
-		return network, host, nil
-	case "ws":
-		host = ep[1]
-		print("Test in websocket")
 		return network, host, nil
 	default:
 		err = xerrors.Errorf("zmq4: unknown protocol %q", network)
