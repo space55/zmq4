@@ -14,8 +14,8 @@ import (
 	"time"
 
 	"github.com/go-zeromq/zmq4/internal/inproc"
-	"github.com/gopherjs/websocket"
 	"golang.org/x/xerrors"
+	"nhooyr.io/websocket"
 )
 
 const (
@@ -230,7 +230,9 @@ connect:
 	case "inproc":
 		conn, err = inproc.Dial(addr)
 	case "ws", "wss":
-		conn, err = websocket.Dial(endpoint)
+		var connPtr *websocket.Conn
+		connPtr, _, err = websocket.Dial(sck.ctx, endpoint, nil)
+		conn = websocket.NetConn(sck.ctx, connPtr, websocket.MessageBinary)
 	default:
 		panic("zmq4: unknown protocol " + network)
 	}
