@@ -14,6 +14,7 @@ import (
 	"time"
 
 	"github.com/go-zeromq/zmq4/internal/inproc"
+	"github.com/gopherjs/websocket"
 	"golang.org/x/xerrors"
 )
 
@@ -165,8 +166,6 @@ func (sck *socket) Listen(endpoint string) error {
 		l, err = net.Listen("udp", addr)
 	case "inproc":
 		l, err = inproc.Listen(addr)
-	case "ws":
-		l, err = wsdropin.Listen(addr)
 	default:
 		panic("zmq4: unknown protocol " + network)
 	}
