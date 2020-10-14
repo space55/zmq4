@@ -1,5 +1,9 @@
 github.com/go-zeromq/goczmq/v4 v4.2.2 h1:HAJN+i+3NW55ijMJJhk7oWxHKXgAuSBkoFfvr8bYj4U=
 github.com/go-zeromq/goczmq/v4 v4.2.2/go.mod h1:Sm/lxrfxP/Oxqs0tnHD6WAhwkWrx+S+1MRrKzcxoaYE=
+github.com/gopherjs/gopherjs v0.0.0-20200217142428-fce0ec30dd00 h1:l5lAOZEym3oK3SQ2HBHWsJUfbNBiTXJDeW2QDxw9AQ0=
+github.com/gopherjs/gopherjs v0.0.0-20200217142428-fce0ec30dd00/go.mod h1:wJfORRmW1u3UXTncJ5qlYoELFm8eSnnEO6hX4iZ3EWY=
+github.com/gopherjs/websocket v0.0.0-20191103002815-9a42957e2b3a h1:AG0ZwOFfTjzk5n1PXhWttuw3i7i0TeqypKSqCXhMlyM=
+github.com/gopherjs/websocket v0.0.0-20191103002815-9a42957e2b3a/go.mod h1:jd+zY81Fx2lC4bfw58+Rflg1srqmedQjbBUejKOjYNY=
 github.com/space55/wsdropin v0.0.2 h1:5OIMFKUjULSSTtCCzB99nVgsNbQAZsvB/aSlZjZNCqY=
 github.com/space55/wsdropin v0.0.2/go.mod h1:+hHAK3VbmqD8tHzLTTuNmw1+8p4jFl9oCQhxJ11G/MI=
 github.com/space55/wsdropin v0.0.3 h1:xDpRZfaJXAAQx6wF35AhAFuM9JB9xm7n1CEn5rRFm6w=

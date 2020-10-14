@@ -14,7 +14,6 @@ import (
 	"time"
 
 	"github.com/go-zeromq/zmq4/internal/inproc"
-	"github.com/space55/wsdropin"
 	"golang.org/x/xerrors"
 )
 
@@ -232,7 +231,7 @@ connect:
 	case "inproc":
 		conn, err = inproc.Dial(addr)
 	case "ws", "wss":
-		conn, err = wsdropin.Dial(endpoint)
+		conn, err = websocket.Dial(endpoint)
 	default:
 		panic("zmq4: unknown protocol " + network)
 	}

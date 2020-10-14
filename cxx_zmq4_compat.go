@@ -192,8 +192,8 @@ func netAddrFrom(port int, ep string) net.Addr {
 		network = "udp"
 	case "inproc":
 		network = "inproc"
-	case "ws":
-		network = "ws"
+	case "ws", "wss":
+		break
 	default:
 		panic("zmq4: unknown protocol [" + network + "]")
 	}
