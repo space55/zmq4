@@ -28,7 +28,7 @@ func splitAddr(v string) (network, addr string, err error) {
 	)
 	network = ep[0]
 	switch network {
-	case "tcp", "udp", "ws":
+	case "tcp", "udp", "ws", "wss":
 		host, port, err = net.SplitHostPort(ep[1])
 		if err != nil {
 			return network, addr, err
